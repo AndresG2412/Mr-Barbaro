@@ -1,21 +1,25 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next'
+import './globals.css'
+import localFont from 'next/font/local'
+import { ClerkProvider } from "@clerk/nextjs";
+
+// Configuración de la fuente
+const campana = localFont({
+  src: './fonts/mainFont.otf',
+  variable: '--font-campana', 
+})
 
 export const metadata: Metadata = {
-  title: "Mr. Bárbaro",
-  description: "Los mejores servicios para ti en barbería, aqui en Mr. Bárbaro",
-};
+  title: 'Mr. Barbaro — The Authentic Barbería',
+  description: 'Barbería de lujo. Cortes clásicos, atención premium y ambiente exclusivo.',
+}
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es">
-      <body>
-        {children}
-      </body>
-    </html>
-  );
+    <ClerkProvider>
+      <html lang="es" className={`${campana.variable}`}>
+        <body>{children}</body>
+      </html>
+    </ClerkProvider>
+  )
 }
