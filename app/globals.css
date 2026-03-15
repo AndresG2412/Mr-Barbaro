@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+
+  /* color de fondo */
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@theme {
+  /* ─── FONDOS ─────────────────────────────────── */
+  --color-eshop-bgWhite:         #1A1A1A;   /* negro suave para cards sobre fondo raíz */
+  --color-eshop-bgMain:          #111111;   /* fondo raíz — negro profundo */
+  --color-eshop-bgCard:          #1E1C18;   /* cards y contenedores */
+  --color-eshop-formsBackground: #252219;   /* inputs, textareas, selects */
+  --color-eshop-bannerHome:      #1B1914;
+
+  /* ─── BORDES ─────────────────────────────────── */
+  --color-eshop-borderSubtle:    #2E2A20;   /* separadores sutiles */
+  --color-eshop-borderEmphasis:  #5C4A1A;   /* borde de card activa / foco */
+
+  /* ─── TIPOGRAFÍA ─────────────────────────────── */
+  --color-eshop-textPrimary:     #F5EDD6;   /* crema cálido — más suave que blanco puro */
+  --color-eshop-textSecondary:   #C4A96B;   /* dorado medio */
+  --color-eshop-textDisabled:    #4A4232;   /* dorado muy apagado */
+  --color-eshop-textDark:        #111111;   /* texto oscuro sobre fondos dorados sólidos */
+  --color-eshop-textHover:       #E8B84B;   /* dorado brillante — hover de links */
+  --color-eshop-textError:       #E05252;
+  --color-eshop-textWarning:     #D4892A;   /* ámbar, legible sobre oscuro */
+
+  /* ─── ACENTO DORADO (escala) ─────────────────── */
+  --color-eshop-goldDeep:        #7A5C1E;   /* sombras, hover muy profundo */
+  --color-eshop-accent:          #C9962A;   /* acento principal */
+  --color-eshop-goldLight:       #E8C96A;   /* highlights, iconos decorativos */
+  --color-eshop-inCart:          #2A2415;   /* tint dorado oscuro — fondo carrito */
+
+  /* ─── BOTONES ────────────────────────────────── */
+  --color-eshop-buttonBase:      #C9962A;
+  --color-eshop-buttonHover:     #7A5C1E;
+
+  /* ─── ESTADOS ────────────────────────────────── */
+  --color-eshop-success:         #2A7A4A;   /* verde bosque, legible sobre oscuro */
+}
